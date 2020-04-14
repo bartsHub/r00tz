@@ -1,0 +1,11 @@
+Steps:
+
+1) git clone https://github.com/bartsHub/r00tz.git
+
+2) docker build -t r00tzwebapp .
+
+3) docker run -p 80:8080 r00tzwebapp
+
+4) open browser: http://localhost/r00tzwebapp/
+
+
