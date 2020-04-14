@@ -25,8 +25,11 @@ public class Login extends HttpServlet {
 
         if(Validate.checkUser(email, pass))
         {
-            RequestDispatcher rs = request.getRequestDispatcher("Welcome");
-            rs.forward(request, response);
+            //RequestDispatcher rs = request.getRequestDispatcher("Welcome");
+            //rs.forward(request, response);
+            RequestDispatcher rs = request.getRequestDispatcher("blog.html");
+            rs.include(request, response);
+
         }
         else
         {
