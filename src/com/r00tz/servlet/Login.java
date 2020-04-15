@@ -25,17 +25,17 @@ public class Login extends HttpServlet {
 
         if(Validate.checkUser(email, pass))
         {
-            //RequestDispatcher rs = request.getRequestDispatcher("Welcome");
-            //rs.forward(request, response);
-            RequestDispatcher rs = request.getRequestDispatcher("blog.html");
+            RequestDispatcher rs = request.getRequestDispatcher("success.html");
             rs.include(request, response);
-
         }
         else
         {
-            out.println("Username or Password incorrect");
-            RequestDispatcher rs = request.getRequestDispatcher("index.html");
-            rs.include(request, response);
+            //out.println("Username or Password incorrect");
+            //RequestDispatcher rs = request.getRequestDispatcher("index.html");
+            //rs.include(request, response);
+
+            RequestDispatcher rs = request.getRequestDispatcher("LoginError");
+            rs.forward(request, response);
         }
     }
 }
